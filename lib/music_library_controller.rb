@@ -5,7 +5,9 @@ class MusicLibraryController
   end
 
   def call
-    
+    loop do
+      puts "Welcome to your music library!"
+    end
   end
 
 end

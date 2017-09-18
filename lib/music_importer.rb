@@ -6,7 +6,7 @@ class MusicImporter
   end
 
   def files
-
+    @list_of_filenames = Dir["#{@path}/*.mp3"]
   end
 
 end

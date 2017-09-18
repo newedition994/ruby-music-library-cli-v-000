@@ -10,6 +10,7 @@ class MusicImporter
     @list_of_filenames.each do |filename|
       filename.slice!("#{@path}/")
     end
+    @list_of_filenames
   end
 
 end

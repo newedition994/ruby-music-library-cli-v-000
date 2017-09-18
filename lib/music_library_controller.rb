@@ -49,7 +49,7 @@ class MusicLibraryController
   def list_genres
     alpha_genres = Genre.all.sort_by{|genre| genre.name}
     alpha_genres.each_with_index do |genre, index|
-      puts "#{index + 1}"
+      puts "#{index + 1}. #{genre.name}"
     end
   end
 

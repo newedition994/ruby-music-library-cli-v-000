@@ -61,5 +61,9 @@ class Song
      song = Song.new(split_filename[1], new_artist, new_genre)
    end
 
+   def self.create_from_filename(filename)
+
+   end
+
 
 end

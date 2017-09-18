@@ -54,7 +54,7 @@ class Song
    end
 
    def self.new_from_filename(filename)
-
+     filename.slice!(".mp3")
    end
 
 

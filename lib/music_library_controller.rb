@@ -79,6 +79,10 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     input = gets.strip.to_i
     alphabetized_songs = Song.all.sort_by!{|song| song.name}
+    if input > 0 && input < alphabetized_songs.size
+      user_selected_song = alphabetized_songs[input.to_i - 1]
+      puts "Playing #{user_selected_song.name} by #{user_selected_song.artist.name}"
+    end
   end
 
 end

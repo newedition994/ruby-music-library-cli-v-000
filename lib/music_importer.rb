@@ -13,4 +13,8 @@ class MusicImporter
     @list_of_filenames
   end
 
+  def import
+
+  end
+
 end

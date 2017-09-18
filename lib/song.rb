@@ -21,8 +21,10 @@ class Song
     @@all << self unless @@all.include?(self)
   end
 
-  def self.create(name)
-    Song.new(name).save
+  def self.create(name, artist=nil, genre=nil)
+    new_song = Song.new(name, artist, genre)
+    new_song.save
+    new_song
   end
 
   def artist=(artist)

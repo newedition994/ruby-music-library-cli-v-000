@@ -7,6 +7,9 @@ class MusicImporter
 
   def files
     @list_of_filenames = Dir["#{@path}/*.mp3"]
+    @list_of_filenames.each do |filename|
+      filename.slice!("#{@path}/")
+    end
   end
 
 end

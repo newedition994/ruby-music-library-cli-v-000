@@ -50,7 +50,7 @@ class Song
      if self.find_by_name(name) != nil
        return self.find_by_name(name)
      end
-     self.create
+     self.create(name, artist, genre)
    end
 
 

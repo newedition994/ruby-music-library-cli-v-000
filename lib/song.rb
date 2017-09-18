@@ -37,16 +37,8 @@ class Song
     genre.songs << self unless genre.songs.include?(self)
   end
 
-  def self.new_from_filename(file_name)
-    song_data = file_name.split(".mp3")[0].split(" - ")
-    new_song = self.new(song_data[1])
-    new_artist.artist = Artist.find_or_create_by_name(song_data[0])
-    new_song.genre = Genre.find_or_create_by_name(song_data[2])
-    new_song
-  end
+  def self.find_by_name(name)
 
-  def self.create_from_filename(file_name)
-    self.new_from_filename(file_name).save
   end
 
 
